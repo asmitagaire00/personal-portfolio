@@ -1,0 +1,145 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  font-size: var(--font-size-default);
+}
+
+:root {
+  --font-size-default: 1.8rem;
+  --font-size-xs: 1.5rem;
+  --font-size-s: 2rem;
+  --font-size-m: 2.3rem;
+  --font-size-l: 2.6rem;
+  --font-size-xl: 3rem;
+  --font-size-xxl: 5rem;
+
+  --padding-xs: 1rem;
+  --padding-s: 1.5rem;
+  --padding-m: 2rem;
+  --padding-l: 2.5rem;
+  --padding-xl: 3rem;
+
+  --margin-xs: 1rem;
+  --margin-s: 1.5rem;
+  --margin-m: 3rem;
+  --margin-l: 9rem;
+  --margin-xl: 18rem;
+  --margin-xxl: 27rem;
+
+  --primary-color: rgb(245, 246, 247);
+  --secondary-color: rgb(240, 241, 229);
+}
+
+.portfolio__outer {
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar {
+  background-color: var(--secondary-color);
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  float: right;
+  padding: var(--padding-l);
+}
+
+.navbar__link {
+  text-decoration: none;
+  font-size: var(--font-size-m);
+  padding: var(--padding-m);
+  color: black;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .navbar__list {
+    flex-direction: column;
+  }
+}
+
+#welcome-section {
+  height: 100vh;
+  background-color: blanchedalmond;
+}
+
+.welcome-section__outer {
+  text-align: center;
+  margin-top: var(--margin-xxl);
+}
+
+.home__header {
+  font-size: var(--font-size-xxl);
+  color: rgb(192, 130, 54);
+}
+
+.projects__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 219, 219);
+}
+
+.project-tile {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--margin-s);
+  padding: var(--padding-l);
+}
+
+.projects__image {
+  width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  margin-top: var(--margin-m);
+}
+
+.projects__text {
+  background-color: var(--secondary-color);
+  width: 100%;
+  text-align: center;
+  padding: var(--padding-s);
+}
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 240, 236);
+}
+
+.contacts-list {
+  display: flex;
+  margin-bottom: var(--margin-xs);
+  margin-top: var(--margin-xs);
+}
+
+.contacts-links {
+  padding-right: var(--padding-s);
+}
